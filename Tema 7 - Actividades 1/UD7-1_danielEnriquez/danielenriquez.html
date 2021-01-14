@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema 7 - Ejercicios 1</title>
+  </head>
+  <body>
+    <h1>Tema 7 Ejercicios</h1>
+
+    <div>
+      <h2>Actividad 2</h2>
+
+      <h3>
+        Realiza una Web que almacene en una cookie el número de visitas que has
+        realizado, incrementado el valor del número de visitas a cada visita
+        realizada. La web debe tener una interfaz para visualizar el contenido
+        de la cookie y para eliminar la cookie
+      </h3>
+
+      <button id="botonAct2">Mostrar Actividad 2</button>
+
+      <hr />
+      <div id="actv2" style="visibility: hidden">
+        <button id="b_visitasC">Mostrar visitas realizadas</button>
+        <p id="numVisitasC"></p>
+
+        <button id="b_eliminarCookie">Eliminar Cookie</button>
+
+        <script src="soluciones.js"></script>
+        <script>
+          actividad2();
+        </script>
+      </div>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>Actividad 3</h2>
+
+      <h3>Realiza el ejercicio anterior usando LocalStorage.</h3>
+
+      <button id="botonAct3">Mostrar Actividad 3</button>
+
+      <hr />
+      <div id="actv3" style="visibility: hidden">
+        <button id="b_visitas">Mostrar visitas realizadas</button>
+        <p id="numVisitas"></p>
+
+        <button id="b_eliminarStorage">Eliminar Storage</button>
+
+        <script src="soluciones.js"></script>
+        <script>
+          actividad3();
+        </script>
+      </div>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>Actividad 4</h2>
+
+      <h3>
+        Realiza un formulario de películas el cual contenga un campo de texto
+        guardar y un listado de películas con un título de listado de películas
+        y estás se vayan listando y mostrando en pantalla si funciona de forma
+        correcta una vez que salgas de la página la información seguirá
+        mostrándose en la página web con las películas puestas anteriormente
+      </h3>
+
+      <button id="botonAct4">Mostrar Actividad 4</button>
+
+      <hr />
+      <div id="actv4" style="visibility: hidden">
+        <select name="peliculas" id="peliculas"></select>
+
+        <button id="botonAdd">Añadir pelicula</button>
+
+        <ol id="carrito"></ol>
+
+        <script src="soluciones.js"></script>
+        <script>
+          actividad4();
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
