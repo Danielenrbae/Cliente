@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio básicos fetch</title>
+  </head>
+  <body>
+    <h1>Ejercicios básicos fetch</h1>
+
+    <div>
+      <h2>Actividad 1</h2>
+
+      <h4>
+        Haz un fetch a la url: 'https://pokeapi.co/api/v2/pokemon/ditto/' <br />
+        Comprueba que el status de la respuesta es 200 <br />
+        Si el estado es 200, imprime el contenido JSON de la respuesta
+      </h4>
+
+      <button id="botonAct1">Mostrar Actividad 1</button>
+
+      <div id="resultado1" style="display: none;">
+        <button id="ocultar1">Ocultar</button>
+        <p id="p1"></p>
+        <p id="p2"></p>
+      </div>
+    </div>
+
+    <div>
+      <h2>Actividad 2</h2>
+
+      <h4>
+        Crea un text input y un boton con HTML <br>
+        En el input se pueden escribir nombre de pokemon <br>
+        Al pulsar el boton, busca el Pokemon en la API https://pokeapi.com/
+        Añade en la página todas las imagenes del Pokemon en cuestión en las que no este de espaldas
+      </h4>
+
+      <button id="botonAct2">Mostrar Actividad 2</button>
+
+      <div id="resultado2" style="display: none;">
+        <button id="ocultar2">Ocultar</button>
+
+        <label for="nombre"> Introduzca el nombre del Pokemon </label>
+        <input name="nombre" id="nombreInput" type="text"/>
+        <button id="botonBuscar"> Buscar</button>
+
+        <div id="imagenes">
+
+        </div>
+
+      </div>
+      
+    </div>
+
+    <script src="./soluciones.js"></script>
+  </body>
+</html>
