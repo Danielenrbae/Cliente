@@ -1,4 +1,6 @@
 
+
+
 //ACTIVIDAD 1
 
 var boton1 = document.getElementById('botonAct1');
@@ -12,8 +14,10 @@ const peticion1 = new Request('https://pokeapi.co/api/v2/pokemon/ditto/');
 //FETCH A LA URL https://pokeapi.co/api/v2/pokemon/ditto/
 
 function actividad1_EJXMLHttpRequest() {
+
     return new Promise(function (resolve, reject) {
         let solicitud;
+
         solicitud = new XMLHttpRequest();
 
         solicitud.open('GET', 'https://pokeapi.co/api/v2/pokemon/ditto/');
@@ -35,11 +39,13 @@ function actividad1_EJXMLHttpRequest() {
 //FETCH A LA URL https://pokeapi.co/api/v2/pokemon/ditto/
 
 function actividad1() {
+
     fetch(peticion1)
         .then(response => {
             if (response.status === 200) {
                 parrafo1.innerHTML = 'El codigo de la peticion es ' + response.status;
                 return response.text();
+
             }
         }).then(data => {
             parrafo2.innerHTML = "Los datos son los siguentes  </br> " + data;
@@ -155,8 +161,6 @@ boton2.addEventListener('click', function () {
     //SOLUCION ACTIVIDAD 2
 
     actividad2();
-
-
 });
 
 botonOcultar2.addEventListener('click', function () {
