@@ -9,29 +9,27 @@ $output = array("media" => 0, "html" => "" , "moda" => 0);
 $output["html"] .= "<h1>".$input['titulo']."</h1>";
 $output["html"] .= "<ul>";
 
-$contar = array();
+$array = $input["numeros"];
+$arraycontado = array_count_values($array);
 
-//$contar = array_count_values($input["numeros"]);
+arsort($arraycontado);
 
-$indice = 0 ;
+$valoranterior = 0;
+
+foreach ($arraycontado as $key => $value) {
+    if($value > $valoranterior){
+	 $valoranterior = $key;
+	}
+}
+
 foreach ($input["numeros"] as $value) {
     $output["media"] += $value;
-   // $output["html"] .= "<li>".$value."</li>";
+    $output["html"] .= "<li>".$value."</li>";
 
-    $contar[$indice] = $value;
-    $indice++;
 
 }
-$longitud = 0;
-$auxiliar = 0;
 
-for($i = 0; $i < count($contar); $i++){
-    
-}
-
-
-
-//$output["moda"] .=  $input["numeros"][1] ;
+$output["moda"] .=  $valoranterior ;
 
 $output["media"] /= count($input["numeros"]);
 $output["html"] .= "</ul>";
