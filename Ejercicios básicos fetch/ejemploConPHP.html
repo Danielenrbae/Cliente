@@ -13,7 +13,7 @@
           
           var datos = {
             titulo: "Listado de números",
-            numeros: [4, 7, 7, 10, 9],
+            numeros: [2,4,6,8,4,8,2,8],
           };
           // en el objeto init tenemos los parámetros de la petición AJAX
           var init = {
@@ -36,6 +36,7 @@
             var respuesta = await response.json();
             
             alert("La media es: " + respuesta.media);
+            alert("La moda es: "+ respuesta.moda);
             document.write(respuesta.html);
             document.close();
           } else {
