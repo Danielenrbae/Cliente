@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo FETCH con php</title>
+  </head>
+  <body>
+    <h1>Ejemplo DE FETCH CON PHP</h1>
+    <script>
+      (async () => {
+        try {
+          
+          var datos = {
+            titulo: "Listado de números",
+            numeros: [2,4,6,8,4,8,2,8],
+          };
+          // en el objeto init tenemos los parámetros de la petición AJAX
+          var init = {
+            // el método de envío de la información será POST
+            method: "POST",
+            headers: {
+              // cabeceras HTTP
+              // vamos a enviar los datos en formato JSON
+              "Content-Type": "application/json",
+            },
+            // el cuerpo de la petición es una cadena de texto
+            // con los datos en formato JSON
+            body: JSON.stringify(datos), // convertimos el objeto a texto
+          };
+          
+
+          var response = await fetch("http://localhost/php/media.php", init);
+          if (response.ok) {
+            
+            var respuesta = await response.json();
+            
+            alert("La media es: " + respuesta.media);
+            alert("La moda es: "+ respuesta.moda);
+            document.write(respuesta.html);
+            document.close();
+          } else {
+            throw new Error(response.statusText);
+          }
+        } catch (err) {
+          console.log("Error al realizar la petición AJAX: " + err.message);
+        }
+      })();
+    </script>
+  </body>
+</html>
