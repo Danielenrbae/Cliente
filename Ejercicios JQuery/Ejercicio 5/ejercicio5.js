@@ -32,6 +32,7 @@ function buscarDatos(tipo, year, titulo) {
     },
         function (data) {
 
+            $("#info");
 
             if (data.Error == "Too many results." || data.Error == "Series not found!") {
                 alert("No existe o la API no contenpla la petición");
@@ -39,7 +40,7 @@ function buscarDatos(tipo, year, titulo) {
 
                 var objeto = data.Search[0];
 
-                $("#consulta").append("<p> El titulo es: " + objeto.Title + "</p> <p> El año de la pelicula es: " + objeto.Year + "</p>");
+                $("#consulta").append("<p id='info'> El titulo es: " + objeto.Title + "</p> <p> El año de la pelicula es: " + objeto.Year + "</p>");
 
                 if (objeto.Poster != 'N/A') {
                     $("#imagen").attr("src", objeto.Poster);
